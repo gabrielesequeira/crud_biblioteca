@@ -1,4 +1,4 @@
-# 📚 CRUD de Biblioteca
+# CRUD de Biblioteca
 
 Projeto da disciplina **CTC4002 - Modelagem e Programação**  
 Feito com **Python** utilizando arquivos **JSON** para persistência de dados.
@@ -10,8 +10,6 @@ Feito com **Python** utilizando arquivos **JSON** para persistência de dados.
 Criar um sistema simples de **cadastro de livros** (CRUD: Create, Read, Update, Delete), executado via terminal.  
 O projeto simula um sistema de biblioteca, permitindo registrar livros com título, autor e ano de publicação.
 
----
-
 ## Funcionalidades
 
 - [x] Cadastrar novos livros
@@ -20,8 +18,6 @@ O projeto simula um sistema de biblioteca, permitindo registrar livros com títu
 - [x] Atualizar informações de um livro
 - [x] Remover um livro do sistema
 - [x] Persistência de dados com JSON
-
----
 
 ## Estrutura de dados
 
