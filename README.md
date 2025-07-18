@@ -1,47 +1,47 @@
-# CRUD de Biblioteca
+# Library CRUD
 
-Projeto da disciplina **CTC4002 - Modelagem e Programação**  
-Feito com **Python** utilizando arquivos **JSON** para persistência de dados.
+Project for the course **CTC4002 - Modeling and Programming**
+Built with **Python** using **JSON** files for data persistence.
 
+## Objective
 
-## Objetivo
+Create a simple **book registration system** (CRUD: Create, Read, Update, Delete), executed via terminal.
+The project simulates a library system, allowing users to register books with title, author, and year of publication.
 
-Criar um sistema simples de **cadastro de livros** (CRUD: Create, Read, Update, Delete), executado via terminal.  
-O projeto simula um sistema de biblioteca, permitindo registrar livros com título, autor e ano de publicação.
+## Features
 
-## Funcionalidades
+* [x] Register new books
+* [x] List all books
+* [x] Search for a book by title
+* [x] Update book information
+* [x] Remove a book from the system
+* [x] Data persistence with JSON
 
-- [x] Cadastrar novos livros
-- [x] Listar todos os livros
-- [x] Buscar livro por título
-- [x] Atualizar informações de um livro
-- [x] Remover um livro do sistema
-- [x] Persistência de dados com JSON
+## Backend Data Logic
 
-## Lógica de dados do Backend
-O sistema utiliza duas funções principais para gerenciar os dados dos livros:
+The system uses two main functions to manage book data:
 
-`carregar_dados()`
-Verifica se o arquivo JSON com os livros existe, lê e converte o conteúdo para um dicionário Python com a lista de livros. Se o arquivo não existir ou estiver vazio, retorna uma lista vazia para evitar erros.
+`load_data()`
+Checks if the JSON file with the books exists, reads and converts its contents into a Python dictionary with the list of books. If the file doesn't exist or is empty, it returns an empty list to avoid errors.
 
-`salvar_dados(dados)`
-Recebe os dados atualizados dos livros como `dados` e grava no arquivo JSON, garantindo que todas as alterações sejam persistidas. Isso mantém o sistema sincronizado e com as informações sempre atualizadas entre as execuções.
+`save_data(data)`
+Receives the updated book data as `data` and writes it to the JSON file, ensuring all changes are persisted. This keeps the system synchronized and the information always up to date between executions.
 
-Essas funções garantem que o programa possa ler, modificar e salvar os dados de forma segura e eficiente, formando a base para as operações de cadastro, consulta, atualização e remoção (CRUD).
+These functions ensure that the program can read, modify, and save data safely and efficiently, forming the foundation for the CRUD operations.
 
+## Data Structure
 
-## Estrutura de dados
-
-Cada livro será salvo no arquivo `data/livros.json` com o seguinte formato:
+Each book will be saved in the file `data/livros.json` in the following format:
 
 ```json
 {
-  "livros": [
+  "books": [
     {
       "id": 1,
-      "titulo": "Dom Casmurro",
-      "autor": "Machado de Assis",
-      "ano": 1899
+      "title": "Dom Casmurro",
+      "author": "Machado de Assis",
+      "year": 1899
     }
   ]
 }
+```
