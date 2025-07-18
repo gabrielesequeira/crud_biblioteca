@@ -3,6 +3,8 @@ import os    # create file paths that work on Windows
 
 CAMINHO_ARQUIVO = os.path.join("data", "livros.json")
 
+
+#MAIN FUNCTIONS
 # register data
 def salvar_dados(dados):
     with open(CAMINHO_ARQUIVO, "w", encoding="utf-8") as arquivo:
@@ -19,12 +21,46 @@ def carregar_dados():
         except json.JSONDecodeError:
             return {"livros": []}
 
-# Funções das opções (você ainda vai implementar essas)
+
+#SECONDARY FUNCTIONS
 def cadastrar_livro():
-    pass
+    titulo = input("Qual o nome do livro? ")
+    autor = input(f"Qual o autor do livro ({titulo})? ")
+    ano = input(f"Qual o ano de publicação do livro ({titulo})? ")
+    editora = input(f"Qual a editora do livro ({titulo})? ")
+
+    dados = carregar_dados()
+
+    novo_id = len(dados["livros"])+ 1
+
+    novo_livro = {
+            "id": novo_id,
+            "titulo": titulo,
+            "autor": autor,
+            "ano": int(ano),
+            "editora": editora
+        }
+
+    dados["livros"].append(novo_livro)
+
+    salvar_dados(dados)
+
+    print(f"\n Livro '{titulo}' cadastrado com sucesso :) ")
 
 def listar_livros():
-    pass
+    dados = carregar_dados()
+    livros = dados["livros"]
+
+    if not livros:
+        print("\nNenhum livro cadastrado ainda.")
+        return
+
+    print("\n Lista de livros:")
+    print("-" * 40)
+    for livro in livros:
+        for chave, valor in livro.items():
+            print(f"{chave.capitalize()}: {valor}")
+        print("-" * 40)
 
 def buscar_livro():
     pass
@@ -33,27 +69,43 @@ def atualizar_livro():
     pass
 
 def remover_livro():
-    pass
+    dados = carregar_dados()
+    livros = dados["livros"]
 
-# Função específica para encerrar o programa
+    titulo = input("Digite o título do livro que deseja remover: ").strip()
+
+    encontrado = False
+    for livro in livros:
+        if livro["titulo"].lower() == titulo.lower():
+            livros.remove(livro)
+            encontrado = True
+            print(f"\nLivro '{titulo}' removido com sucesso.")
+            break
+
+    if not encontrado:
+        print(f"\nO Livro '{titulo}' não foi encontrado.")
+
+    salvar_dados(dados)
+
 def sair():
     salvar_dados(dados)
     print("Saindo...")
 
-# carregar os dados no início
+
+
+
+#MAIN BLOCK
 dados = carregar_dados()
 
-# dicionário de opções
 opcoes = {
     "1": cadastrar_livro,
     "2": listar_livros,
     "3": buscar_livro,
     "4": atualizar_livro,
     "5": remover_livro,
-    "6": sair  # agora aponta para uma função nomeada
+    "6": sair 
 }
 
-# loop principal do menu
 while True:
     print("\n=== MENU ===")
     print("1. Cadastrar novo livro")

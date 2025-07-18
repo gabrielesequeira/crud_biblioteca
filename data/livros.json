@@ -1,3 +1,46 @@
 {
-  "livros": []
+    "livros": [
+        {
+            "id": 1,
+            "titulo": "Dom Casmurro",
+            "autor": "Machado de Assis",
+            "ano": 1899,
+            "editora": "Editora A"
+        },
+        {
+            "id": 2,
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "ano": 1949,
+            "editora": "Companhia das Letras"
+        },
+        {
+            "id": 3,
+            "titulo": "O Pequeno Príncipe",
+            "autor": "Antoine de Saint-Exupéry",
+            "ano": 1943,
+            "editora": "HarperCollins"
+        },
+        {
+            "id": 4,
+            "titulo": "Os Miseráveis",
+            "autor": "La capa",
+            "ano": 1233,
+            "editora": "Moderna"
+        },
+        {
+            "id": 5,
+            "titulo": "Alice in boderland",
+            "autor": "Cuca Maluca",
+            "ano": 1888,
+            "editora": "Sales"
+        },
+        {
+            "id": 6,
+            "titulo": "Suca",
+            "autor": "Duca",
+            "ano": 1333,
+            "editora": "Mica"
+        }
+    ]
 }
