@@ -35,12 +35,12 @@ Each book will be saved in the file `data/livros.json` in the following format:
 
 ```json
 {
-  "books": [
+  "livros": [
     {
       "id": 1,
-      "title": "Dom Casmurro",
-      "author": "Machado de Assis",
-      "year": 1899
+      "titulo": "Dom Casmurro",
+      "autor": "Machado de Assis",
+      "ano": 1899
     }
   ]
 }
