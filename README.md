@@ -45,3 +45,29 @@ Each book will be saved in the file `data/livros.json` in the following format:
   ]
 }
 ```
+## Topics Learned and Practiced
+
+During the development of this project, the following topics covered in class were reinforced:
+
+- **JSON File Handling**
+  - Reading and writing data using the `json` library
+  - Structuring data in a hierarchical format
+
+- **Structured Programming with Functions**
+  - Modularizing the code using reusable functions
+  - Separating responsibilities (reading, writing, processing)
+
+- **CRUD Operations**
+  - Creating, listing, updating, and deleting records
+  - Implementing conditional logic for flow control
+
+- **Input and Output via Terminal**
+  - Interacting with the user using `input()` and `print()`
+
+- **Python Data Structures**
+  - Using lists and dictionaries to represent collections and objects
+
+- **File and Exception Handling**
+  - Checking file existence and content
+  - Preventing failures during read/write operations
+
